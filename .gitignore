@@ -1,0 +1,10 @@
+# Vendor/dev files
+# ------------
+/vendor
+/node_modules
+/kirby
+
+# System files
+# ------------
+Icon
+.DS_Store
