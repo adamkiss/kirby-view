@@ -39,9 +39,10 @@ class Plugin {
 		);
 
 		$config = new ViewConfig()->addViewComponents(...$components);
-		$cache = new ViewCache(option('debug', true), new ViewCachePool(kirby()->roots()->cache() . '/views'));
-
-		$this->renderer = Renderer::make($config, $cache);
+		$cache = option('debug', false)
+			? ViewCache::disabled(kirby()->roots()->cache() . '/views')
+			: ViewCache::enabled(kirby()->roots()->cache() . '/views');
+		$this->renderer = Renderer::make($config, viewCache: $cache);
 	}
 
 	public static function instance(): Plugin {
