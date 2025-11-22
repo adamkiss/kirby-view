@@ -1,7 +1,7 @@
 {
     "name": "adamkiss/kirby-view",
     "description": "Tempest View template engine for Kirby CMS",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "keywords": [
         "kirby",
         "kirby-plugin",

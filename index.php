@@ -5,7 +5,9 @@ use AdamKiss\View\Template;
 use Kirby\Cms\App;
 use Kirby\Cms\Event;
 
-@require_once __DIR__ . '/vendor/autoload.php';
+try {
+	require __DIR__ . '/vendor/autoload.php';
+} catch (\Throwable $th) {}
 
 App::plugin('adamkiss/view', [
 	'options' => [
